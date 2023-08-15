@@ -1,0 +1,16 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    height: 200vh;
+}
+.bg{
+    background-image: url(./images/slide1.jpg);
+    background-size: cover;
+    height: 600px;
+}
+li{
+    display: inline;
+    padding: 20px;
+}

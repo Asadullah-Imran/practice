@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;1,100;1,300;1,400;1,500&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+}
+header{
+    overflow: hidden;
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(images/slide1.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    width: 100%;
+}
+.navbar{
+    width: 100%;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    /* align-items: center; */
+    z-index: 2;
+}
+
+.navbar img{
+    height: 100px;
+    margin-left: 15px;
+    
+}
+.navbar .nav-links{
+    width: 100vw;
+    display: flex;
+    padding-right: 50px;
+    justify-content: right;
+}
+.navbar .nav-links .menu-list{
+    display: block;
+    
+}
+.navbar .nav-links .menu-list li{
+    list-style: none;
+    margin-left: 15px;
+    display: inline-block;
+    padding: 8px 12px;
+    display: relative;
+    
+}
+.nav-links .menu-list li::after{
+    
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #2f85f5;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+.nav-links .menu-list li:hover::after{
+    width: 100%;
+}
+.navbar .nav-links .menu-list li a{
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 21px;
+    
+}
+.nav-links .menu-list li a:hover{
+    color: #89baff;
+}
+header .text-box{
+
+    width: 90%;
+    color: #fff;
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    z-index: 1;
+    overflow: hidden;
+}
+header .text-box h1{
+    font-size: 40px;
+}
+header .text-box p{
+    margin: 10px 0 40px;
+    font-size: 25px;
+    color: #fff;
+}
+header .text-box .udf-btn{
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 12px 34px;
+    font-size: 13px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+}
+header .text-box .udf-btn:hover{
+    border: 1px solid #2f85f5;
+    background: #2f85f5;
+    transition: 1s;
+}
+.navbar  .fa{
+        display: none;
+}
+
+
+
+
+/*--------------------------------------------- responsive code here------------------------------------- */
+/* responsive */
+@media(max-width:960px){
+    header .text-box h1{
+        font-size: 20px;
+    }
+    header .navbar .nav-links .menu-list li{
+        display: block;
+    }
+    header .navbar .nav-links .menu-list li a{
+        display: block;
+        font-size: 18px;
+    }
+    header .navbar .nav-links{
+        position: fixed;
+        top: 0;
+        left: 100%;
+        right: 0;
+        height: 100vh;
+        width: 100%;
+        max-width: 300px;
+        /* background: #222; */
+        background:rgba(0,0,0,.6);
+        backdrop-filter: blur(10px);
+        display: block;
+        padding: 40px 0;
+        text-align: center;
+
+
+        /* position: fixed;
+        background:#2f85f5;
+        height: 100vh;
+        width:200px;
+        top: 0;
+        right: -200px;
+        text-align: left;
+        z-index: 200;
+        transition: 1s; */
+    }
+    .navbar .fa{
+        display: block;
+        color: #fff;
+        margin: 10px;
+        padding: 10px;
+        font-size: 30px;
+        cursor: pointer;
+    }
+
+    .nav-links ul{
+        padding: 5px 20px;
+    }
+    nav img{
+        height: 60px;
+    }
+}
+
+/* for mobile */
+@media(max-width:700px){
+    .text-box{
+        z-index: 1;
+    }
+    .text-box h1{
+        font-size: 20px;
+    }
+    .nav-links ul li{
+        display: block;
+    }
+    .nav-links ul li a{
+        font-size: 18px;
+    }
+    .nav-links{
+        position: fixed;
+        top: 0;
+        left: 0%;
+        right: 0;
+        height: 100vh;
+        width: 100%;
+        max-width: 300px;
+        /* background: #222; */
+        background:rgba(0,0,0,.6);
+        backdrop-filter: blur(10px);
+        display: block;
+        padding: 40px 0;
+        text-align: center;
+    }
+    .navbar .fa{
+        display: block;
+        color: #fff;
+        margin: 10px;
+        padding: 10px;
+        font-size: 30px;
+        cursor: pointer;
+    }
+    .nav-links ul{
+        padding: 5px 20px;
+    }
+    nav img{
+        height:55px ;
+    }
+}
+
